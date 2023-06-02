@@ -7,9 +7,9 @@ export default function NavLink({ children, path, className }) {
 			to={path}
 			className={({ isActive }) =>
 				clsx(
-					'block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0',
+					'block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 dark:text-gray-400',
 					{
-						'bg-blue-700 md:text-blue-700 md:dark:text-blue-500 text-white':
+						'bg-blue-700 md:text-blue-700 md:dark:text-blue-400 text-white':
 							isActive,
 					},
 					className
