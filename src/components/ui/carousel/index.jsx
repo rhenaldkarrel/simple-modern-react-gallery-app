@@ -46,6 +46,9 @@ export default function Carousel() {
 	return (
 		<div className='flex justify-center w-full items-center'>
 			<div className='relative w-full'>
+				<header className='absolute text-white w-full h-full grid place-items-center pointer-events-none'>
+					<h1>Capture the Moments, Freeze the Memories</h1>
+				</header>
 				<div className='carousel rounded-lg'>
 					{
 						<SliderControl
