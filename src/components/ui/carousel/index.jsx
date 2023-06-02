@@ -58,7 +58,7 @@ export default function Carousel() {
 						<div className='w-full flex-shrink-0' key={img} ref={refs[i]}>
 							<img
 								src={img}
-								className='w-full object-cover max-h-[31.25rem] bg-fixed'
+								className='w-full object-cover max-h-[31.25rem] h-full bg-fixed'
 								alt={img}
 							/>
 						</div>
