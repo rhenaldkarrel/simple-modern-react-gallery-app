@@ -1,3 +1,10 @@
+import React from 'react';
+import Carousel from '../../components/ui/carousel';
+
 export default function Home() {
-	return <h1>Home</h1>;
+	return (
+		<React.Fragment>
+			<Carousel />
+		</React.Fragment>
+	);
 }
