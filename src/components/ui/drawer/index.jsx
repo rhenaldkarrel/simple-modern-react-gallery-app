@@ -16,7 +16,7 @@ export default function Drawer({ isOpen, setIsOpen, header, children }) {
 			>
 				<article className='relative p-4 w-screen max-w-lg pb-10 flex flex-col space-y-6 h-full'>
 					<div className='flex'>
-						<header className='font-bold text-lg'>{header}</header>
+						<header className='font-bold text-base md:text-lg'>{header}</header>
 						<button
 							type='button'
 							className='text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white'
