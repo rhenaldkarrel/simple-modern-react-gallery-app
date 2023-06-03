@@ -44,7 +44,7 @@ export default function Gallery() {
 
 	return (
 		<React.Fragment>
-			<section className="rounded-lg bg-no-repeat bg-bottom lg:bg-center bg-[url('https://images.unsplash.com/photo-1444837881208-4d46d5c1f127?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1645&q=80')] bg-gray-700 bg-blend-normal">
+			<section className="rounded-lg bg-no-repeat bg-bottom lg:bg-center bg-[url('https://images.unsplash.com/photo-1444837881208-4d46d5c1f127?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1645&q=80')] bg-fixed bg-gray-700 bg-blend-normal">
 				<div className='px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56'>
 					<h1 className='mb-10 font-extrabold tracking-tight leading-none text-white'>
 						Timeless beauties in frames
