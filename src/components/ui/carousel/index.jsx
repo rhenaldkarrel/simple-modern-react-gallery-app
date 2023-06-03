@@ -1,21 +1,15 @@
 import React from 'react';
 import SliderControl from './slider-control';
 
-const images = [
-	'https://images.unsplash.com/photo-1581388847562-d5a56eec1cfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80',
-	'https://images.unsplash.com/photo-1446052377488-d40ee7263458?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80',
-	'https://images.unsplash.com/photo-1500069329338-1f270dce111f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-];
-
-const totalImages = images.length;
-
-export default function Carousel() {
+export default function Carousel({ header, images }) {
 	const [currentImage, setCurrentImage] = React.useState(0);
 
 	const refs = images.reduce((acc, val, i) => {
 		acc[i] = React.createRef();
 		return acc;
 	}, {});
+
+	const totalImages = images.length;
 
 	const scrollToImage = (i) => {
 		setCurrentImage(i);
@@ -47,7 +41,9 @@ export default function Carousel() {
 		<div className='flex justify-center w-full items-center'>
 			<div className='relative w-full'>
 				<header className='absolute text-white w-full h-full grid place-items-center pointer-events-none'>
-					<h1>Capture the Moments, Freeze the Memories</h1>
+					<h1 className='px-14 text-lg text-center lg:text-left md:text-4xl'>
+						{header}
+					</h1>
 				</header>
 				<div className='carousel rounded-lg'>
 					{

@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from '../../components/ui/carousel';
-import { CATEGORIES, photos } from '../../lib/data/photos';
+import { CATEGORIES, photos, homeCarouselImages } from '../../lib/data/';
 import PhotoCard from '../../components/photo-card';
 
 const blogImages = photos.filter((p) => p.category.includes(CATEGORIES.blog));
@@ -12,7 +12,10 @@ const editorialImages = photos.filter((p) =>
 export default function Home() {
 	return (
 		<React.Fragment>
-			<Carousel />
+			<Carousel
+				header='Capture the Moments, Freeze the Memories'
+				images={homeCarouselImages}
+			/>
 			<section className='photos mt-4'>
 				<article className='photos-blog'>
 					<h2 className='mb-4'>Blog</h2>
