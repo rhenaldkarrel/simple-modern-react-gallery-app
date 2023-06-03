@@ -1,48 +1,46 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PhotoCard from '../../components/photo-card';
 import { CATEGORIES, photos } from '../../lib/data/photos';
 import CategoryLink from '../../components/category-link';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
+import clsx from 'clsx';
 
 export default function Gallery() {
 	const [photoList, setPhotoList] = React.useState(photos);
-	const [query, setQuery] = React.useState('');
-	const [searchParams] = useSearchParams();
+
+	const [searchParams, setSearchParams] = useSearchParams();
 	const categoryParam = searchParams.get('category');
 
-	const handleChangeSearch = (e) => setQuery(e.target.value.toLowerCase());
+	const handleSearch = (e) => {
+		if (categoryParam) {
+			searchParams.delete('category');
 
-	useEffect(() => {
+			setSearchParams(searchParams);
+		}
+
+		const query = e.target.value;
+
+		const filteredPhoto = photos.filter(
+			(p) =>
+				p.category.some((c) => c.includes(query)) ||
+				p.title.toLowerCase().includes(query)
+		);
+
+		setPhotoList(filteredPhoto);
+	};
+
+	React.useEffect(() => {
 		if (!categoryParam) {
 			setPhotoList(photos);
 			return;
 		}
 
-		setPhotoList(() => {
-			const filteredPhoto = photos.filter((p) =>
-				p.category.includes(categoryParam)
-			);
+		const filteredPhoto = photos.filter((p) =>
+			p.category.includes(categoryParam)
+		);
 
-			return filteredPhoto;
-		});
+		setPhotoList(filteredPhoto);
 	}, [categoryParam]);
-
-	useEffect(() => {
-		if (!query) {
-			setPhotoList(photos);
-			return;
-		}
-
-		setPhotoList(() => {
-			const filteredPhoto = photos.filter(
-				(p) =>
-					p.category.some((c) => c.includes(query)) ||
-					p.title.toLowerCase().includes(query)
-			);
-
-			return filteredPhoto;
-		});
-	}, [query]);
 
 	return (
 		<React.Fragment>
@@ -81,8 +79,7 @@ export default function Gallery() {
 								id='search-input'
 								className='block w-full p-4 pl-10 text-sm text-gray-900 border border-black bg-gray-50 outline-none'
 								placeholder='Find images...'
-								onChange={handleChangeSearch}
-								value={query}
+								onKeyUp={handleSearch}
 							/>
 						</div>
 					</div>
@@ -90,10 +87,23 @@ export default function Gallery() {
 			</section>
 			<section className='categories my-8'>
 				<nav className='bg-gray-50 overflow-auto rounded-lg py-4 dark:bg-gray-800'>
-					<ul className='flex w-full md:justify-center'>
+					<ul className='flex w-full lg:justify-center items-center'>
 						{Object.keys(CATEGORIES).map((category) => (
 							<CategoryLink key={category}>{category}</CategoryLink>
 						))}
+						<li className='nav-item order-first lg:order-last'>
+							<Link
+								className={clsx(
+									'px-12 uppercase transition-all py-2 rounded-lg hover:bg-gray-100 text-gray-500 whitespace-nowrap',
+									{
+										'cursor-not-allowed': !categoryParam,
+									}
+								)}
+								to='/gallery'
+							>
+								reset
+							</Link>
+						</li>
 					</ul>
 				</nav>
 			</section>
