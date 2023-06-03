@@ -1,6 +1,46 @@
-# Getting Started with Create React App
+# Simple Web Gallery React Application
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Key Points
+
+- Utilized React Router (hooks, functions, components, etc)
+- Tailwindcss for styling (and dark mode 😁)
+- Search photo functionality
+- Filter photo by category (via photo detail tag/label or gallery's category tab menu)
+- Responsive design
+- Simple layouting
+- Structure folder and React components
+
+## Screenshots
+
+| ![space-1.jpg](./screenshots/home-page.png) |
+| :-----------------------------------------: |
+|                 _Home Page_                 |
+
+| ![space-1.jpg](./screenshots/gallery-page.png) |
+| :--------------------------------------------: |
+|                 _Gallery Page_                 |
+
+| ![space-1.jpg](./screenshots/photo-detail-information.png) |
+| :--------------------------------------------------------: |
+|                   _Photo Detail Preview_                   |
+
+| ![space-1.jpg](./screenshots/dark-mode-preview.png) |
+| :-------------------------------------------------: |
+|                 _Dark Mode Preview_                 |
+
+| ![space-1.jpg](./screenshots/tablet-preview.png) |
+| :----------------------------------------------: |
+|                 _Tablet Preview_                 |
+
+| ![space-1.jpg](./screenshots/mobile-preview.png) |
+| :----------------------------------------------: |
+|                 _Mobile Preview_                 |
+
+## How to Install
+
+Clone this git repository and open it in Visual Studio Code. Then, please read the [Available Scripts](#available-scripts) section.
 
 ## Available Scripts
 
