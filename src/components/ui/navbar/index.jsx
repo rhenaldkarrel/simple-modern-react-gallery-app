@@ -1,4 +1,5 @@
 import NavLink from './nav-link';
+import ThemeToggler from './theme-toggler';
 
 export default function Navbar() {
 	return (
@@ -10,6 +11,9 @@ export default function Navbar() {
 					</li>
 					<li>
 						<NavLink path='/gallery'>Gallery</NavLink>
+					</li>
+					<li>
+						<ThemeToggler />
 					</li>
 				</ul>
 			</div>
