@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Filter photo by category (via photo detail tag/label or gallery's category tab menu)
 - Responsive design
 - Simple layouting
-- Structure folder and React components
+- Structured folder and React components
 
 ## Screenshots
 
@@ -44,7 +44,7 @@ Clone this git repository and open it in Visual Studio Code. Then, please read t
 
 ## License
 
-License under [MIT License, Copyright (c) 2023 Rhenald Karrel](./LICENSE).
+Licensed under [MIT License, Copyright (c) 2023 Rhenald Karrel](./LICENSE).
 
 ## Available Scripts
 
