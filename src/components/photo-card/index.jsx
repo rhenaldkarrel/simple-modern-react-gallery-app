@@ -46,7 +46,7 @@ export default function PhotoCard({ image }) {
 					<p>{image.description}</p>
 					<p className='flex gap-2'>
 						{image.category.map((c) => (
-							<Link key={c} to={`/gallery?category=${c}`}>
+							<Link key={c} to={`/gallery?category=${c}`} reloadDocument>
 								<Badge>{c}</Badge>
 							</Link>
 						))}
