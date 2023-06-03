@@ -32,7 +32,7 @@ export default function PhotoCard({ image }) {
 					alt={image.title}
 					className='aspect-square w-full object-cover'
 				/>
-				<div className='absolute w-full bottom-0 left-0 -translate-x-8 text-white px-4 pb-4 z-[99] opacity-0 transition-all bg-gradient-to-t from-black to-transparent group-hover:opacity-100 group-hover:translate-x-0'>
+				<div className='absolute w-full bottom-0 left-0 -translate-x-8 text-white px-4 pb-4 z-[9] opacity-0 transition-all bg-gradient-to-t from-black to-transparent group-hover:opacity-100 group-hover:translate-x-0'>
 					<p className='truncate'>{image.title}</p>
 				</div>
 			</div>
