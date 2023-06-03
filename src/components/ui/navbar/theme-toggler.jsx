@@ -5,11 +5,7 @@ export default function ThemeToggler() {
 	const [theme, setTheme] = React.useState(() => {
 		const theme = localStorage.getItem('theme');
 
-		if (theme === 'dark') {
-			return 'dark';
-		} else {
-			return 'light';
-		}
+		return theme;
 	});
 
 	const handleToggleTheme = () => {
@@ -29,9 +25,9 @@ export default function ThemeToggler() {
 	}, [theme]);
 
 	React.useEffect(() => {
-		const html = document.querySelector('html');
-
 		if (theme === 'dark') {
+			const html = document.querySelector('html');
+
 			html.classList.add('dark');
 		}
 	}, []);
