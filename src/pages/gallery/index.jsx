@@ -94,9 +94,12 @@ export default function Gallery() {
 						<li className='nav-item order-first lg:order-last'>
 							<Link
 								className={clsx(
-									'px-12 uppercase transition-all py-2 rounded-lg hover:bg-gray-100 text-gray-500 whitespace-nowrap',
+									'px-12 uppercase transition-all py-2 whitespace-nowrap',
 									{
 										'cursor-not-allowed': !categoryParam,
+										'text-gray-500': !categoryParam,
+										'hover:border-b hover:border-b-black dark:hover:border-b-white':
+											categoryParam,
 									}
 								)}
 								to='/gallery'
