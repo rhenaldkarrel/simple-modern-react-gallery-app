@@ -42,6 +42,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Clone this git repository and open it in Visual Studio Code. Then, please read the [Available Scripts](#available-scripts) section.
 
+## License
+
+License under [MIT License, Copyright (c) 2023 Rhenald Karrel](./LICENSE).
+
 ## Available Scripts
 
 In the project directory, you can run:
