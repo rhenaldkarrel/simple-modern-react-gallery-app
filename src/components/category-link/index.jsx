@@ -10,8 +10,11 @@ export default function CategoryLink({ children }) {
 			<Link
 				className={clsx(
 					'px-12 uppercase transition-all py-2 whitespace-nowrap',
-					'hover:border-b hover:border-b-black',
-					{ 'border-b border-b-black': categoryParam === children }
+					'hover:border-b hover:border-b-black dark:hover:border-b-white',
+					{
+						'border-b border-b-black dark:border-b-white':
+							categoryParam === children,
+					}
 				)}
 				to={`?category=${children}`}
 			>
