@@ -44,7 +44,7 @@ export default function Gallery() {
 
 	return (
 		<React.Fragment>
-			<section className="rounded-lg bg-no-repeat bg-bottom lg:bg-center bg-[url('https://images.unsplash.com/photo-1444837881208-4d46d5c1f127?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1645&q=80')] bg-fixed bg-gray-700 bg-blend-normal">
+			<section className="rounded-lg bg-no-repeat bg-bottom bg-cover lg:bg-center bg-[url('https://images.unsplash.com/photo-1446729444801-31245ddba81a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')] bg-fixed bg-gray-700 bg-blend-normal">
 				<div className='px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56'>
 					<h1 className='mb-10 font-extrabold tracking-tight leading-none text-white'>
 						Timeless beauties in frames
@@ -86,7 +86,7 @@ export default function Gallery() {
 				</div>
 			</section>
 			<section className='categories my-8'>
-				<nav className='bg-gray-50 overflow-auto rounded-lg py-4 dark:bg-gray-800'>
+				<nav className='bg-gray-100 overflow-auto rounded-lg py-4 dark:bg-gray-800'>
 					<ul className='flex w-full lg:justify-center items-center'>
 						{Object.keys(CATEGORIES).map((category) => (
 							<CategoryLink key={category}>{category}</CategoryLink>
