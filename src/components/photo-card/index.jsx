@@ -20,7 +20,7 @@ export default function PhotoCard({ image }) {
 			<div
 				className={clsx(
 					'photo-card group relative cursor-pointer rounded-lg overflow-hidden transition-all after:transition-all',
-					'hover:after:conent-none hover:after:absolute hover:after:w-full hover:after:h-full hover:after:top-0 hover:after:left-0 hover:after:z-[1] hover:after:bg-black hover:after:opacity-25'
+					'hover:after:content-none hover:after:absolute hover:after:w-full hover:after:h-full hover:after:top-0 hover:after:left-0 hover:after:z-[1] hover:after:bg-black hover:after:opacity-25'
 				)}
 				title={image.title}
 				id={image.id}
